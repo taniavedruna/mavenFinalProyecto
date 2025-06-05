@@ -1,4 +1,5 @@
 package es.vedruna;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +17,7 @@ class CalculadoraTest {
 
   @Test
   void restarDosNumeros() {
-    System.out.println("Test: Sumar dos números");
+    System.out.println("Test: Restar dos números");
     float a = 3.0f;
     float b = 2.0f;
     float expResul = 1.0f;
@@ -26,7 +27,7 @@ class CalculadoraTest {
 
   @Test
   void multiplicarDosNumeros() {
-    System.out.println("Test: Sumar dos números");
+    System.out.println("Test: Multiplicar dos números");
     float a = 3.0f;
     float b = 2.0f;
     float expResul = 6.0f;
@@ -36,7 +37,7 @@ class CalculadoraTest {
 
   @Test
   void dividirDosNumeros() {
-    System.out.println("Test: Sumar dos números");
+    System.out.println("Test: Dividir dos números");
     float a = 10.0f;
     float b = 2.0f;
     float expResul = 5.0f;
@@ -44,12 +45,14 @@ class CalculadoraTest {
     Assertions.assertEquals(expResul, resultado);
   }
 
+  @Test
   void dividirEntreCeroDebeLanzarExcepcion() {
     System.out.println("Test: Dividir entre cero (esperando excepción)");
     float a = 8.0f;
     float b = 0.0f;
     Assertions.assertThrows(ArithmeticException.class, () -> {
-      Calculadora.dividir(a, b);});
+      Calculadora.dividir(a, b);
+    });
   }
 
   @Test
@@ -61,6 +64,4 @@ class CalculadoraTest {
     float resultado = Calculadora.dividir(a, b);
     Assertions.assertEquals(expResul, resultado);
   }
-
-
 }

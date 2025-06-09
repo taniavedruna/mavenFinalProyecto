@@ -32,6 +32,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: tania1988/proyectoFinal:latest
+          tags: tania1988/proyectofinal:latest
 
 
